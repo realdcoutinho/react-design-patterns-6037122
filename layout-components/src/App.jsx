@@ -34,7 +34,17 @@ const products = [{
 
 function App() {
   return (
-    <h1>Your code here!</h1>
+    <>
+    <RegulatList 
+      items={people}
+      resourceName="person"
+      itemComponent={LargePersonListItem}/>
+    <RegulatList 
+      items={people}
+      resourceName="person"
+      itemComponent={SmallPersonListItem}/>
+    </>
+
   )
 }
 
