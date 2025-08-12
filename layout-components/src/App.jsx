@@ -39,6 +39,7 @@ function App() {
       items={people}
       resourceName="person"
       itemComponent={LargePersonListItem}/>
+      
     <RegulatList 
       items={people}
       resourceName="person"
