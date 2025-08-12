@@ -19,5 +19,6 @@ export const SplitScreen = ({ leftWeight = 1, rightWeight = 1, children }) => {
         {right}
       </Pane>
     </Container>
+    
   );
 }
