@@ -1,21 +1,29 @@
-import React, {userState, useEffect} from 'react';  
-import axis from 'axios'; 
-import {UserInfo} from './UserInfo';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import { UserInfo } from './UserInfo';
 
-export const CurrentUserInfo = () =>
+
+export const CurrentUserInfo = () => 
 {
   const [user, setUser] = useState(null);
 
-  useEffect(() => 
-  {
+  useEffect(() => {
     (async () => 
     {
-      const response = await axios.get('/api/current_user');
-      setUser(response.data);
-    })
+      try 
+      {
+        const response = await axios.get('/api/current-user');
+        setUser(response.data);
+      } 
+      catch (error) 
+      {
+        console.error("API call failed:", error);
+      }
+    })();
   }, []);
 
-  return (
-     user && <UserInfo user={user} />
-  );
-}
+  if (!user) return <div>Loading user info...</div>;
+
+
+  return <UserInfo user={user} />;
+};

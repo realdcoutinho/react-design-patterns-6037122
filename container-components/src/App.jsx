@@ -1,8 +1,20 @@
-import { CurrentUserInfo } from "./CurrentUserInfo";
+import { CurrentUserLoader } from "./CurrentUserLoader.jsx";
+import { CurrentUserInfo } from "./CurrentUserInfo.jsx";
+import { UserInfo } from "./UserInfo";
 
-function App() 
-{
+function App() {
   return (
-    <CurrentUserInfo/>
-  )
+    <CurrentUserLoader>
+      <UserInfo/>
+    </CurrentUserLoader>
+  );
 }
+
+// function App() {
+//   return (
+//     <CurrentUserInfo/>
+//   );
+// }
+
+export default App;
+
