@@ -33,6 +33,7 @@ export const Modal = ({ children }) =>
           {children}
         </ModalBody>
       </ModalBackground>
+      
     )}
     </>
   )
