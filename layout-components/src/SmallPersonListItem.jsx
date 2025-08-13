@@ -1,4 +1,5 @@
-export const SmallPersonListItem = ({ person }) => {
+export const SmallPersonListItem =  ({ person }) => 
+{
 	const { name, age } = person;
 
 	return (
